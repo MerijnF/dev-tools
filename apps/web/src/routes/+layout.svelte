@@ -15,35 +15,50 @@
 		@import '../styles/colors';
 
 		:root {
-			--color-brand-1: var(--color-emerald-700);
+			--color-primary: var(--color-emerald-500);
+			--color-primary-muted: var(--color-emerald-300);
+			--color-primary-emphsize: var(--color-emerald-700);
 
-			--color-surface-1: var(--color-slate-100);
-			--color-surface-2: var(--color-slate-200);
-			--color-surface-3: var(--color-slate-300);
-			--color-surface-4: var(--color-slate-400);
+			--color-background: var(--color-slate-200);
 
-			--color-text-1: var(--color-slate-900);
-			--color-text-1-muted: var(--color-slate-600);
+			--color-surface: var(--color-slate-100);
+			--color-surface-muted: var(--color-slate-200);
+			--color-surface-emphsize: var(--color-slate-50);
+
+			--color-border: var(--color-slate-300);
+
+			--color-text: var(--color-slate-950);
+			--color-text-muted: var(--color-slate-600);
 
 			--size-0: 0;
 			--size-1: 0.25rem;
 			--size-2: 0.5rem;
 			--size-3: 0.75rem;
 			--size-4: 1rem;
+			--size-5: 1.25rem;
+			--size-6: 1.5rem;
+			--size-7: 1.75rem;
+			--size-8: 2rem;
 
-			--size-line-1: 1px;
-			--size-line-2: 2px;
+			--size-line-height: 1.125rem;
 
-			--border-1: solid var(--color-surface-4) var(--size-line-1);
+			--size-stroke: 1px;
+			--size-stroke-bold: 2px;
+
+			--border-1: solid var(--color-border) var(--size-stroke);
+			--outline-focus: var(--size-stroke-bold) solid var(--color-primary-muted);
 		}
 
 		body {
-			background-color: var(--color-slate-200);
+			background-color: var(--color-background);
 			margin: 0;
 		}
 
 		* {
 			box-sizing: border-box;
+			line-height: var(--size-line-height);
+			font-size: 16px;
+			font-family: system-ui, sans-serif;
 		}
 	}
 </style>
