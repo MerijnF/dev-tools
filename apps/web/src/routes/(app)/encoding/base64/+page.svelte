@@ -4,10 +4,7 @@
 </script>
 
 <Textarea placeholder="Enter text to encode" />
-<Textarea disabled placeholder="Enter text to encode" />
 <Button>Encode</Button>
-
-<Button disabled>Encode</Button>
 
 <style>
 </style>
