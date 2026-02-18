@@ -19,16 +19,17 @@
 			--color-primary-muted: var(--color-emerald-300);
 			--color-primary-emphsize: var(--color-emerald-700);
 
-			--color-background: var(--color-slate-200);
+			--color-background: var(--color-zinc-100);
+			--color-background-muted: var(--color-zinc-200);
+			--color-surface: var(--color-zinc-200);
+			--color-surface-muted: var(--color-zinc-300);
 
-			--color-surface: var(--color-slate-100);
-			--color-surface-muted: var(--color-slate-200);
-			--color-surface-emphsize: var(--color-slate-50);
+			--color-neutral: var(--color-neutral-200);
+			--color-neutral-emphasize: var(--color-neutral-300);
+			--color-neutral-muted: var(--color-neutral-300);
 
-			--color-border: var(--color-slate-300);
-
-			--color-text: var(--color-slate-950);
-			--color-text-muted: var(--color-slate-600);
+			--color-text: var(--color-gray-950);
+			--color-text-muted: var(--color-gray-500);
 
 			--size-0: 0;
 			--size-1: 0.25rem;
@@ -45,8 +46,10 @@
 			--size-stroke: 1px;
 			--size-stroke-bold: 2px;
 
-			--border-1: solid var(--color-border) var(--size-stroke);
+			--border-neutral: solid var(--color-neutral-emphasize) var(--size-stroke);
 			--outline-focus: var(--size-stroke-bold) solid var(--color-primary-muted);
+			--shadow-elevated: 0 var(--size-stroke) var(--size-stroke-bold) 0
+				var(--color-neutral-emphasize);
 		}
 
 		body {
