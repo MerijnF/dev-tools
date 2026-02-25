@@ -1,14 +1,25 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
-	import type { HTMLButtonAttributes } from 'svelte/elements';
+	import clsx from 'clsx';
+	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
-	let { children, ...restProps }: { children: Snippet } & HTMLButtonAttributes = $props();
+	type ButtonProps = (HTMLAnchorAttributes & { href: string }) | HTMLButtonAttributes;
+
+	let { children, class: classProps, ...restProps }: ButtonProps = $props();
 </script>
 
-<button {...restProps}>{@render children()}</button>
+{#if 'href' in restProps}
+	<a class={clsx(classProps, 'button')} {...restProps}>{@render children?.()}</a>
+{:else}
+	<button class={clsx(classProps, 'button')} {...restProps}>{@render children?.()}</button>
+{/if}
 
 <style>
-	button {
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.button {
 		padding: var(--size-2) var(--size-3);
 		background-color: var(--color-neutral);
 		border: var(--border-neutral);

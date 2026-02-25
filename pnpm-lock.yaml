@@ -19,6 +19,10 @@ importers:
         version: 5.9.3
 
   apps/web:
+    dependencies:
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
     devDependencies:
       '@eslint/compat':
         specifier: ^2.0.2

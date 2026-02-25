@@ -27,7 +27,7 @@
 		}
 
 		&:disabled {
-			background-color: var(--color-background-muted);
+			background-color: var(--color-neutral-muted);
 			color: var(--color-text-muted);
 			cursor: not-allowed;
 		}

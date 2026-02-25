@@ -15,23 +15,21 @@
 		@import '../styles/colors';
 
 		:root {
-			--color-primary: var(--color-emerald-500);
-			--color-primary-muted: var(--color-emerald-300);
-			--color-primary-emphsize: var(--color-emerald-700);
+			--color-background: var(--color-zinc-50);
+			--color-surface: var(--color-zinc-100);
+			--color-surface-emphasize: var(--color-zinc-200);
 
-			--color-background: var(--color-zinc-100);
-			--color-background-muted: var(--color-zinc-200);
-			--color-surface: var(--color-zinc-200);
-			--color-surface-muted: var(--color-zinc-300);
+			--color-primary: var(--color-emerald-500);
+			--color-primary-muted: var(--color-emerald-600);
+			--color-primary-emphasize: var(--color-emerald-700);
 
 			--color-neutral: var(--color-neutral-200);
 			--color-neutral-emphasize: var(--color-neutral-300);
-			--color-neutral-muted: var(--color-neutral-300);
+			--color-neutral-muted: var(--color-neutral-100);
 
 			--color-text: var(--color-gray-950);
 			--color-text-muted: var(--color-gray-500);
 
-			--size-0: 0;
 			--size-1: 0.25rem;
 			--size-2: 0.5rem;
 			--size-3: 0.75rem;
@@ -40,6 +38,11 @@
 			--size-6: 1.5rem;
 			--size-7: 1.75rem;
 			--size-8: 2rem;
+
+			--font-size-small: 0.75rem;
+			--font-size-base: 1rem;
+			--font-size-large: 1.25rem;
+			--font-size-xlarge: 1.5rem;
 
 			--size-line-height: 1.125rem;
 
