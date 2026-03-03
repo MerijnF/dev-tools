@@ -46,18 +46,4 @@
 		gap: var(--size-4);
 		align-items: center;
 	}
-
-	.nav-link {
-		text-decoration: none;
-		color: var(--color-text);
-		font-weight: 500;
-		padding: var(--size-2) var(--size-3);
-		border-radius: 0.375rem;
-		transition: all 0.2s ease;
-
-		&:hover {
-			background-color: var(--color-surface);
-			color: var(--color-primary);
-		}
-	}
 </style>

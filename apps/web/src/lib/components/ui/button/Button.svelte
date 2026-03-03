@@ -4,17 +4,18 @@
 
 	type ButtonProps = (HTMLAnchorAttributes & { href: string }) | HTMLButtonAttributes;
 
-	let { children, class: classProps, ...restProps }: ButtonProps = $props();
+	let { children, class: propsClass, ...restProps }: ButtonProps = $props();
 </script>
 
 {#if 'href' in restProps}
-	<a class={clsx(classProps, 'button')} {...restProps}>{@render children?.()}</a>
+	<a class={clsx(propsClass, 'button')} {...restProps}>{@render children?.()}</a>
 {:else}
-	<button class={clsx(classProps, 'button')} {...restProps}>{@render children?.()}</button>
+	<button class={clsx(propsClass, 'button')} {...restProps}>{@render children?.()}</button>
 {/if}
 
 <style>
 	a {
+		display: inline-block;
 		text-decoration: none;
 		color: inherit;
 	}
