@@ -5,7 +5,7 @@
 
 <header>
 	<a href={resolve('/')} class="brand">
-		<h1>Dev tools</h1>
+		<span>Dev tools</span>
 	</a>
 	<nav>
 		<Button href={resolve('/tools')}>Tools</Button>
@@ -34,12 +34,10 @@
 		display: flex;
 		align-items: center;
 
-		h1 {
-			margin: 0;
-			font-size: var(--font-size-xlarge);
-			font-weight: bold;
-			color: var(--color-primary);
-		}
+		margin: 0;
+		font-size: var(--font-size-xlarge);
+		font-weight: bolder;
+		color: var(--color-primary);
 	}
 
 	nav {

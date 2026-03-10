@@ -2,10 +2,11 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Card } from '$lib/components/ui/card';
 	import { Textarea } from '$lib/components/ui/textarea';
+	import PageTitle from '$lib/components/ui/title/PageTitle.svelte';
 </script>
 
 <section>
-	<h2>Buttons</h2>
+	<PageTitle>UI components</PageTitle>
 	<div class="grid">
 		<Card variant="ghost">
 			<h3>Button on background</h3>

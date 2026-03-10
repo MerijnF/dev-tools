@@ -44,12 +44,12 @@
 			--size-7: 1.75rem;
 			--size-8: 2rem;
 
-			--font-size-small: 0.75rem;
-			--font-size-base: 1rem;
-			--font-size-large: 1.25rem;
-			--font-size-xlarge: 1.5rem;
+			--font-size-small: 0.75rem; /* 12px * 1.25 = 15px */
+			--font-size-base: 1rem; /* 16px * 1.25 = 20px */
+			--font-size-large: 1.25rem; /* 20px * 1.25 = 25px */
+			--font-size-xlarge: 1.5rem; /* 24px * 1.25 = 30px */
 
-			--size-line-height: 1.125rem;
+			--line-height: 1.25;
 
 			--size-stroke: 1px;
 			--size-stroke-bold: 2px;
@@ -58,18 +58,32 @@
 			--outline-focus: var(--size-stroke-bold) solid var(--color-primary-muted);
 			--shadow-elevated: 0 var(--size-stroke) var(--size-stroke-bold) 0
 				var(--color-neutral-emphasize);
+
+			font-size: 16px;
+			font-family: 'Noto Sans', system-ui, sans-serif;
 		}
 
 		body {
 			background-color: var(--color-background);
 			margin: 0;
+			line-height: var(--line-height);
+		}
+		/* normalize */
+		button,
+		input,
+		optgroup,
+		select,
+		textarea {
+			font-family: inherit;
+			font-size: 100%;
+			line-height: var(--line-height);
+			margin: 0;
 		}
 
-		* {
+		*,
+		::before,
+		::after {
 			box-sizing: border-box;
-			line-height: var(--size-line-height);
-			font-size: 16px;
-			font-family: 'Noto Sans', system-ui, sans-serif;
 		}
 	}
 </style>
