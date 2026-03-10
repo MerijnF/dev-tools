@@ -11,22 +11,22 @@
 			<h3>Button on background</h3>
 			<Button>Click me</Button>
 			<Button disabled>Click me</Button>
-			<Button class="classic">Click me with a class</Button>
 			<Button href="#">Link button</Button>
+			<Button variant="primary">Primary</Button>
 		</Card>
 		<Card>
 			<h3>Button on surface emphasize</h3>
 			<Button>Click me</Button>
 			<Button disabled>Click me</Button>
-			<Button class="classic">Click me with a class</Button>
 			<Button href="#">Link button</Button>
+			<Button variant="primary">Primary</Button>
 		</Card>
 		<Card variant="emphasized">
 			<h3>Button on surface emphasize</h3>
 			<Button>Click me</Button>
 			<Button disabled>Click me</Button>
-			<Button class="classic">Click me with a class</Button>
 			<Button href="#">Link button</Button>
+			<Button variant="primary">Primary</Button>
 		</Card>
 	</div>
 </section>
@@ -63,10 +63,5 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		gap: var(--size-4);
-	}
-
-	:global .classic {
-		background-color: red !important;
-		color: white;
 	}
 </style>

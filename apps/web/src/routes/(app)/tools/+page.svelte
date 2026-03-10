@@ -1,4 +1,9 @@
+<script>
+	import { resolve } from '$app/paths';
+	import { Link } from '$lib/components/ui/link';
+</script>
+
 <section>
 	<h2>Encoding</h2>
-	<a href="tools/encoding/base64">base64</a>
+	<Link href={resolve('/tools/encoding/base64')}>base64</Link>
 </section>

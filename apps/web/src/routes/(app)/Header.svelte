@@ -1,13 +1,14 @@
 <script>
 	import { Button } from '$lib/components/ui/button';
+	import { resolve } from '$app/paths';
 </script>
 
 <header>
-	<a href="/" class="brand">
+	<a href={resolve('/')} class="brand">
 		<h1>Dev tools</h1>
 	</a>
 	<nav>
-		<Button href="/tools">Tools</Button>
+		<Button href={resolve('/tools')}>Tools</Button>
 	</nav>
 </header>
 

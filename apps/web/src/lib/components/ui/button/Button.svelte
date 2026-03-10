@@ -2,15 +2,17 @@
 	import clsx from 'clsx';
 	import type { HTMLAnchorAttributes, HTMLButtonAttributes } from 'svelte/elements';
 
-	type ButtonProps = (HTMLAnchorAttributes & { href: string }) | HTMLButtonAttributes;
+	type ButtonProps = ((HTMLAnchorAttributes & { href: string }) | HTMLButtonAttributes) & {
+		variant?: 'neutral' | 'primary';
+	};
 
-	let { children, class: propsClass, ...restProps }: ButtonProps = $props();
+	let { children, class: propsClass, variant = 'neutral', ...restProps }: ButtonProps = $props();
 </script>
 
 {#if 'href' in restProps}
-	<a class={clsx(propsClass, 'button')} {...restProps}>{@render children?.()}</a>
+	<a class={clsx(propsClass, 'button', variant)} {...restProps}>{@render children?.()}</a>
 {:else}
-	<button class={clsx(propsClass, 'button')} {...restProps}>{@render children?.()}</button>
+	<button class={clsx(propsClass, 'button', variant)} {...restProps}>{@render children?.()}</button>
 {/if}
 
 <style>
@@ -22,14 +24,38 @@
 
 	.button {
 		padding: var(--size-2) var(--size-3);
-		background-color: var(--color-neutral);
 		border: var(--border-neutral);
 		border-radius: var(--size-2);
 		box-shadow: var(--shadow-elevated);
 		transition: box-shadow 0.2s ease-out;
+		font-weight: bold;
+
+		&.neutral {
+			background-color: var(--color-neutral);
+			border-color: var(--color-neutral-emphasize);
+			color: var(--color-text);
+			&:disabled {
+				background-color: var(--color-neutral-muted);
+				color: var(--color-text-muted);
+			}
+			&:hover {
+				background-color: var(--color-neutral-emphasize);
+			}
+		}
+		&.primary {
+			background-color: var(--color-primary);
+			border-color: var(--color-primary-emphasize);
+			color: var(--color-text);
+			&:disabled {
+				background-color: var(--color-neutral-muted);
+				color: var(--color-text-muted);
+			}
+			&:hover {
+				background-color: var(--color-primary-emphasize);
+			}
+		}
 
 		&:hover {
-			background-color: var(--color-neutral-emphasize);
 			cursor: pointer;
 		}
 
@@ -42,8 +68,6 @@
 		}
 
 		&:disabled {
-			background-color: var(--color-neutral-muted);
-			color: var(--color-text-muted);
 			cursor: not-allowed;
 			box-shadow: none;
 		}

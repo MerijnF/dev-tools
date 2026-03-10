@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '@fontsource-variable/noto-sans';
+
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
@@ -13,15 +15,14 @@
 <style>
 	:global {
 		@import '../styles/colors';
-
 		:root {
 			--color-background: var(--color-zinc-50);
 			--color-surface: var(--color-zinc-100);
 			--color-surface-emphasize: var(--color-zinc-200);
 
 			--color-primary: var(--color-emerald-500);
-			--color-primary-muted: var(--color-emerald-600);
-			--color-primary-emphasize: var(--color-emerald-700);
+			--color-primary-muted: var(--color-emerald-400);
+			--color-primary-emphasize: var(--color-emerald-600);
 
 			--color-neutral: var(--color-neutral-200);
 			--color-neutral-emphasize: var(--color-neutral-300);
@@ -29,6 +30,10 @@
 
 			--color-text: var(--color-gray-950);
 			--color-text-muted: var(--color-gray-500);
+
+			--color-link: var(--color-sky-700);
+			--color-link-emphasize: var(--color-sky-800);
+			--color-link-muted: var(--color-sky-500);
 
 			--size-1: 0.25rem;
 			--size-2: 0.5rem;
@@ -64,7 +69,7 @@
 			box-sizing: border-box;
 			line-height: var(--size-line-height);
 			font-size: 16px;
-			font-family: system-ui, sans-serif;
+			font-family: 'Noto Sans', system-ui, sans-serif;
 		}
 	}
 </style>
