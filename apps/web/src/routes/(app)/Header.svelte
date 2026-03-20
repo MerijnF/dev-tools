@@ -17,11 +17,7 @@
 		display: flex;
 		align-items: center;
 		gap: var(--size-4);
-		background: linear-gradient(
-			to right,
-			var(--color-surface-emphasize),
-			var(--color-surface-emphasize)
-		);
+		background-color: var(--color-surface-container);
 		border-bottom: var(--border-neutral);
 		padding: var(--size-4);
 		position: sticky;
