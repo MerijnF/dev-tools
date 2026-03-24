@@ -1,4 +1,37 @@
-<div class="grid">
+<div class="grid light">
+	<div class="surface">
+		<h4>surface</h4>
+		<p>on surface</p>
+		<p class="on-surface-variant">on surface-variant</p>
+	</div>
+
+	<div class="surface-container-lowest">
+		<h4>surface-container-lowest</h4>
+		<p>on surface</p>
+		<p class="on-surface-variant">on surface-variant</p>
+	</div>
+	<div class="surface-container-low">
+		<h4>surface-container-low</h4>
+		<p>on surface</p>
+		<p class="on-surface-variant">on surface-variant</p>
+	</div>
+	<div class="surface-container">
+		<h4>surface-container</h4>
+		<p>on surface</p>
+		<p class="on-surface-variant">on surface-variant</p>
+	</div>
+	<div class="surface-container-high">
+		<h4>surface-container-high</h4>
+		<p>on surface</p>
+		<p class="on-surface-variant">on surface-variant</p>
+	</div>
+	<div class="surface-container-highest">
+		<h4>surface-container-highest</h4>
+		<p>on surface</p>
+		<p class="on-surface-variant">on surface-variant</p>
+	</div>
+</div>
+<div class="grid dark">
 	<div class="surface">
 		<h4>surface</h4>
 		<p>on surface</p>
@@ -33,6 +66,13 @@
 </div>
 
 <style>
+	.light {
+		color-scheme: light;
+	}
+	.dark {
+		color-scheme: dark;
+	}
+
 	.on-surface-variant {
 		color: var(--color-on-surface-variant);
 	}
@@ -40,6 +80,12 @@
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
+		div {
+			padding: var(--size-4);
+			p {
+				margin: var(--size-2) 0;
+			}
+		}
 	}
 
 	.surface {

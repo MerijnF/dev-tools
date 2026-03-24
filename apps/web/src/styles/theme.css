@@ -3,14 +3,50 @@
 @import './colors.css';
 
 :root {
-	--color-surface: var(--color-zinc-100);
-	--color-surface-container-lowest: var(--color-zinc-50);
-	--color-surface-container-low: var(--color-zinc-100);
-	--color-surface-container: var(--color-zinc-200);
-	--color-surface-container-high: var(--color-zinc-300);
-	--color-surface-container-highest: var(--color-zinc-400);
-	--color-on-surface: var(--color-zinc-900);
-	--color-on-surface-variant: var(--color-zinc-700);
+	--color-light-surface: var(--color-neutral-50);
+	--color-light-surface-container-lowest: var(--color-white);
+	--color-light-surface-container-low: var(--color-neutral-100);
+	--color-light-surface-container: var(--color-neutral-150);
+	--color-light-surface-container-high: var(--color-neutral-200);
+	--color-light-surface-container-highest: var(--color-neutral-250);
+	--color-light-on-surface: var(--color-black);
+	--color-light-on-surface-variant: var(--color-neutral-700);
+
+	--color-dark-surface: var(--color-neutral-900);
+	--color-dark-surface-container-lowest: var(--color-neutral-950);
+	--color-dark-surface-container-low: var(--color-neutral-850);
+	--color-dark-surface-container: var(--color-neutral-800);
+	--color-dark-surface-container-high: var(--color-neutral-750);
+	--color-dark-surface-container-highest: var(--color-neutral-700);
+	--color-dark-on-surface: var(--color-neutral-50);
+	--color-dark-on-surface-variant: var(--color-neutral-300);
+
+	--color-surface: light-dark(var(--color-light-surface), var(--color-dark-surface));
+	--color-surface-container-lowest: light-dark(
+		var(--color-light-surface-container-lowest),
+		var(--color-dark-surface-container-lowest)
+	);
+	--color-surface-container-low: light-dark(
+		var(--color-light-surface-container-low),
+		var(--color-dark-surface-container-low)
+	);
+	--color-surface-container: light-dark(
+		var(--color-light-surface-container),
+		var(--color-dark-surface-container)
+	);
+	--color-surface-container-high: light-dark(
+		var(--color-light-surface-container-high),
+		var(--color-dark-surface-container-high)
+	);
+	--color-surface-container-highest: light-dark(
+		var(--color-light-surface-container-highest),
+		var(--color-dark-surface-container-highest)
+	);
+	--color-on-surface: light-dark(var(--color-light-on-surface), var(--color-dark-on-surface));
+	--color-on-surface-variant: light-dark(
+		var(--color-light-on-surface-variant),
+		var(--color-dark-on-surface-variant)
+	);
 
 	--color-primary: var(--color-blue-500);
 
@@ -39,10 +75,12 @@
 
 	font-size: 16px;
 	font-family: 'Noto Sans', system-ui, sans-serif;
+	color-scheme: light dark;
 }
 
 body {
 	background-color: var(--color-surface);
+	color: var(--color-on-surface);
 	margin: 0;
 	line-height: var(--line-height);
 }
