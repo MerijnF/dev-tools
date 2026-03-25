@@ -48,7 +48,57 @@
 		var(--color-dark-on-surface-variant)
 	);
 
-	--color-primary: var(--color-blue-500);
+	--color-light-inverse-surface: var(--color-dark-surface);
+	--color-light-inverse-on-surface: var(--color-dark-on-surface);
+	--color-light-inverse-primary: var(--color-dark-primary);
+	--color-dark-inverse-surface: var(--color-light-surface);
+	--color-dark-inverse-on-surface: var(--color-light-on-surface);
+	--color-dark-inverse-primary: var(--color-light-primary);
+	--color-inverse-surface: light-dark(
+		var(--color-light-inverse-surface),
+		var(--color-dark-inverse-surface)
+	);
+	--color-inverse-on-surface: light-dark(
+		var(--color-light-inverse-on-surface),
+		var(--color-dark-inverse-on-surface)
+	);
+	--color-inverse-primary: light-dark(
+		var(--color-light-inverse-primary),
+		var(--color-dark-inverse-primary)
+	);
+
+	--color-light-outline: var(--color-neutral-500);
+	--color-dark-outline: var(--color-neutral-500);
+	--color-outline: light-dark(var(--color-light-outline), var(--color-dark-outline));
+
+	--color-light-outline-variant: var(--color-neutral-300);
+	--color-dark-outline-variant: var(--color-neutral-600);
+	--color-outline-variant: light-dark(
+		var(--color-light-outline-variant),
+		var(--color-dark-outline-variant)
+	);
+
+	--color-shadow: var(--color-black);
+
+	--color-light-primary: var(--color-emerald-800);
+	--color-dark-primary: var(--color-emerald-300);
+	--color-light-on-primary: var(--color-emerald-50);
+	--color-dark-on-primary: var(--color-emerald-950);
+	--color-primary: light-dark(var(--color-light-primary), var(--color-dark-primary));
+	--color-on-primary: light-dark(var(--color-light-on-primary), var(--color-dark-on-primary));
+
+	--color-light-primary-container: var(--color-emerald-400);
+	--color-dark-primary-container: var(--color-emerald-700);
+	--color-light-on-primary-container: var(--color-emerald-900);
+	--color-dark-on-primary-container: var(--color-emerald-100);
+	--color-primary-container: light-dark(
+		var(--color-light-primary-container),
+		var(--color-dark-primary-container)
+	);
+	--color-on-primary-container: light-dark(
+		var(--color-light-on-primary-container),
+		var(--color-dark-on-primary-container)
+	);
 
 	--size-1: 0.25rem;
 	--size-2: 0.5rem;
