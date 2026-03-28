@@ -1,15 +1,23 @@
 <script>
 	import { Button } from '$lib/components/ui/button';
 	import { Card } from '$lib/components/ui/card';
-	import { Textarea } from '$lib/components/ui/textarea';
+	import { Link } from '$lib/components/ui/link';
 	import PageTitle from '$lib/components/ui/title/PageTitle.svelte';
 </script>
+
+<svelte:head>
+	<title>UI components</title>
+</svelte:head>
 
 <section>
 	<PageTitle>UI components</PageTitle>
 	<div class="grid">
-		<Card variant="ghost">
-			<h3>Button on background</h3>
+		<Card>
+			<h3>Link</h3>
+			<Link href="#">This is a link</Link>
+		</Card>
+		<Card>
+			<h3>Button on surface emphasize</h3>
 			<Button>Click me</Button>
 			<Button disabled>Click me</Button>
 			<Button href="#">Link button</Button>
@@ -21,40 +29,6 @@
 			<Button disabled>Click me</Button>
 			<Button href="#">Link button</Button>
 			<Button variant="primary">Primary</Button>
-		</Card>
-		<Card variant="emphasized">
-			<h3>Button on surface emphasize</h3>
-			<Button>Click me</Button>
-			<Button disabled>Click me</Button>
-			<Button href="#">Link button</Button>
-			<Button variant="primary">Primary</Button>
-		</Card>
-	</div>
-</section>
-
-<section>
-	<h2>Form Inputs</h2>
-	<div class="grid">
-		<Card variant="ghost">
-			<h3>Form on background</h3>
-			<h4>textarea</h4>
-			<Textarea />
-			<Textarea placeholder="Enter text here..." />
-			<Textarea disabled placeholder="Enter text here..." />
-		</Card>
-		<Card>
-			<h3>Form on surface</h3>
-			<h4>textarea</h4>
-			<Textarea />
-			<Textarea placeholder="Enter text here..." />
-			<Textarea disabled placeholder="Enter text here..." />
-		</Card>
-		<Card variant="emphasized">
-			<h3>Form on surface emphasize</h3>
-			<h4>textarea</h4>
-			<Textarea />
-			<Textarea placeholder="Enter text here..." />
-			<Textarea disabled placeholder="Enter text here..." />
 		</Card>
 	</div>
 </section>

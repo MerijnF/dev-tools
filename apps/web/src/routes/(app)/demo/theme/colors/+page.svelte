@@ -4,9 +4,33 @@
 			<h4>primary</h4>
 			<p>on primary</p>
 		</div>
+		<div class="secondary">
+			<h4>secondary</h4>
+			<p>on secondary</p>
+		</div>
+		<div class="tertiary">
+			<h4>tertiary</h4>
+			<p>on tertiary</p>
+		</div>
+		<div class="error">
+			<h4>error</h4>
+			<p>on error</p>
+		</div>
 		<div class="primary-container">
 			<h4>primary-container</h4>
 			<p>on primary-container</p>
+		</div>
+		<div class="secondary-container">
+			<h4>secondary-container</h4>
+			<p>on secondary-container</p>
+		</div>
+		<div class="tertiary-container">
+			<h4>tertiary-container</h4>
+			<p>on tertiary-container</p>
+		</div>
+		<div class="error-container">
+			<h4>error-container</h4>
+			<p>on error-container</p>
 		</div>
 		<div class="surface">
 			<h4>surface</h4>
@@ -94,15 +118,51 @@
 	}
 
 	.primary {
-		grid-column: span 10;
+		grid-column: span 3;
 		background-color: var(--color-primary);
 		color: var(--color-on-primary);
 	}
 
 	.primary-container {
-		grid-column: span 10;
+		grid-column: span 3;
 		background-color: var(--color-primary-container);
 		color: var(--color-on-primary-container);
+	}
+
+	.secondary {
+		grid-column: span 3;
+		background-color: var(--color-secondary);
+		color: var(--color-on-secondary);
+	}
+
+	.secondary-container {
+		grid-column: span 3;
+		background-color: var(--color-secondary-container);
+		color: var(--color-on-secondary-container);
+	}
+
+	.tertiary {
+		grid-column: span 3;
+		background-color: var(--color-tertiary);
+		color: var(--color-on-tertiary);
+	}
+
+	.tertiary-container {
+		grid-column: span 3;
+		background-color: var(--color-tertiary-container);
+		color: var(--color-on-tertiary-container);
+	}
+
+	.error {
+		grid-column: span 1;
+		background-color: var(--color-error);
+		color: var(--color-on-error);
+	}
+
+	.error-container {
+		grid-column: span 1;
+		background-color: var(--color-error-container);
+		color: var(--color-on-error-container);
 	}
 
 	.outline {

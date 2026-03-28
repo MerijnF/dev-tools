@@ -12,12 +12,16 @@
 
 <style>
 	a {
-		color: var(--color-link);
+		color: var(--color-tertiary);
 		text-decoration: underline;
 		text-decoration-thickness: var(--size-stroke);
 
 		&:hover {
-			color: var(--color-link-emphasize);
+			color: color-mix(in srgb, var(--color-tertiary) calc(100% - var(--mix-hover)), transparent);
+		}
+
+		&:focus {
+			color: color-mix(in srgb, var(--color-tertiary) calc(100% - var(--mix-focus)), transparent);
 		}
 	}
 </style>

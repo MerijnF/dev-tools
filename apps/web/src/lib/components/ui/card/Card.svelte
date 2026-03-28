@@ -2,34 +2,25 @@
 	import clsx from 'clsx';
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	type CardProps = {
-		variant?: 'ghost' | 'default' | 'emphasized';
-	} & HTMLAttributes<HTMLDivElement>;
+	type CardProps = HTMLAttributes<HTMLDivElement>;
 
-	let { variant = 'default', class: propsClass, children, ...restProps }: CardProps = $props();
+	let { class: propsClass, children, ...restProps }: CardProps = $props();
 </script>
 
-<div class={clsx(propsClass, 'card', variant)} {...restProps}>
+<div class={clsx(propsClass, 'card')} {...restProps}>
 	{@render children?.()}
 </div>
 
 <style>
 	.card {
-		border: var(--border-neutral);
+		border: var(--size-stroke) solid var(--color-outline-variant);
 		border-radius: var(--size-2);
 		padding: var(--size-4);
 		box-shadow: var(--shadow-elevated);
-
-		&.ghost {
-			background-color: transparent;
-		}
+		background-color: var(--color-surface-container-low);
 
 		&.default {
-			background-color: var(--color-surface);
-		}
-
-		&.emphasized {
-			background-color: var(--color-surface-emphasize);
+			background-color: var(--color-surface-container-low);
 		}
 	}
 </style>
