@@ -17,14 +17,7 @@
 			<Link href="#">This is a link</Link>
 		</Card>
 		<Card>
-			<h3>Button on surface emphasize</h3>
-			<Button>Click me</Button>
-			<Button disabled>Click me</Button>
-			<Button href="#">Link button</Button>
-			<Button variant="primary">Primary</Button>
-		</Card>
-		<Card>
-			<h3>Button on surface emphasize</h3>
+			<h3>Button</h3>
 			<Button>Click me</Button>
 			<Button disabled>Click me</Button>
 			<Button href="#">Link button</Button>

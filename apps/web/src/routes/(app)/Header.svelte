@@ -1,6 +1,7 @@
 <script>
 	import { Button } from '$lib/components/ui/button';
 	import { resolve } from '$app/paths';
+	import ThemeSwitcher from '../ThemeSwitcher.svelte';
 </script>
 
 <header>
@@ -10,6 +11,7 @@
 	<nav>
 		<Button href={resolve('/tools')}>Tools</Button>
 	</nav>
+	<ThemeSwitcher />
 </header>
 
 <style>
@@ -17,7 +19,7 @@
 		display: flex;
 		align-items: center;
 		gap: var(--size-4);
-		background-color: var(--color-surface-container);
+		background-color: var(--color-surface-container-high);
 		border-bottom: var(--border-neutral);
 		padding: var(--size-4);
 		position: sticky;

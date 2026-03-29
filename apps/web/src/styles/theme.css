@@ -28,7 +28,7 @@
 
 	--outline-focus: var(--size-stroke-bold) solid var(--color-primary);
 
-	--shadow-elevated: 0 1px 2px 0 var(--color-shadow), 0 1px 3px 0 var(--color-shadow);
+	--shadow-elevated: 0 1px 2px 0 var(--color-key-shadow), 0 1px 3px 0 var(--color-ambient-shadow);
 
 	font-size: 16px;
 	font-family: 'Noto Sans', system-ui, sans-serif;

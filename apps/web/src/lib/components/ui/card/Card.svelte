@@ -2,12 +2,12 @@
 	import clsx from 'clsx';
 	import type { HTMLAttributes } from 'svelte/elements';
 
-	type CardProps = HTMLAttributes<HTMLDivElement>;
+	type CardProps = { elevated?: boolean } & HTMLAttributes<HTMLDivElement>;
 
-	let { class: propsClass, children, ...restProps }: CardProps = $props();
+	let { class: propsClass, children, elevated = false, ...restProps }: CardProps = $props();
 </script>
 
-<div class={clsx(propsClass, 'card')} {...restProps}>
+<div class={clsx(propsClass, 'card', { elevated: elevated })} {...restProps}>
 	{@render children?.()}
 </div>
 
@@ -16,11 +16,10 @@
 		border: var(--size-stroke) solid var(--color-outline-variant);
 		border-radius: var(--size-2);
 		padding: var(--size-4);
-		box-shadow: var(--shadow-elevated);
-		background-color: var(--color-surface-container-low);
+		background-color: var(--color-surface-container);
 
-		&.default {
-			background-color: var(--color-surface-container-low);
+		&.elevated {
+			box-shadow: var(--shadow-elevated);
 		}
 	}
 </style>

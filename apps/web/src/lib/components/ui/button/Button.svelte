@@ -29,45 +29,53 @@
 		box-shadow: var(--shadow-elevated);
 		transition: box-shadow 0.2s ease-out;
 		font-weight: bold;
+		--button-background-color: var(--color-surface-container-low);
+		--button-color: var(--color-on-surface);
+		background-color: var(--button-background-color);
+		color: var(--button-color);
 
-		&.neutral {
-			background-color: var(--color-neutral);
-			border-color: var(--color-neutral-emphasize);
-			color: var(--color-text);
-			&:disabled {
-				background-color: var(--color-neutral-muted);
-				color: var(--color-text-muted);
-			}
-			&:hover {
-				background-color: var(--color-neutral-emphasize);
-			}
-		}
 		&.primary {
-			background-color: var(--color-primary);
-			border-color: var(--color-primary-emphasize);
-			color: var(--color-text);
-			&:disabled {
-				background-color: var(--color-neutral-muted);
-				color: var(--color-text-muted);
-			}
-			&:hover {
-				background-color: var(--color-primary-emphasize);
-			}
+			--button-background-color: var(--color-primary-container);
+			--button-color: var(--color-on-primary-container);
 		}
 
-		&:hover {
+		&:hover:not(:disabled) {
 			cursor: pointer;
+			background-color: color-mix(
+				in srgb,
+				var(--button-background-color),
+				var(--button-color) var(--mix-hover)
+			);
 		}
 
-		&:active {
+		&:active:not(:disabled) {
 			box-shadow: none;
+			background-color: color-mix(
+				in srgb,
+				var(--button-background-color),
+				var(--button-color) var(--mix-focus)
+			);
 		}
 
-		&:focus-visible {
+		&:focus:not(:disabled) {
+			background-color: color-mix(
+				in srgb,
+				var(--button-background-color),
+				var(--button-color) var(--mix-focus)
+			);
+		}
+
+		&:focus-visible:not(:disabled) {
+			background-color: color-mix(
+				in srgb,
+				var(--button-background-color),
+				var(--button-color) var(--mix-focus)
+			);
 			outline: var(--outline-focus);
 		}
 
 		&:disabled {
+			opacity: 80%;
 			cursor: not-allowed;
 			box-shadow: none;
 		}
