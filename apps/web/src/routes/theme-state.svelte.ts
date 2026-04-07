@@ -1,7 +1,16 @@
 import { createContext } from "svelte";
+import { MediaQuery } from "svelte/reactivity";
 
 export class ThemeState {
+    prefersDark = new MediaQuery('prefers-color-scheme: dark', true);
     colorScheme: 'light' | 'dark' | 'auto' = $state('auto');
+    colorMode: 'light' | 'dark' = $derived.by(() => {
+        if (this.colorScheme === 'auto') {
+            return this.prefersDark ? 'dark' : 'light';
+        } else {
+            return this.colorScheme;
+        }
+    })
 
     setAuto() {
         this.colorScheme = 'auto';
@@ -14,7 +23,7 @@ export class ThemeState {
         } else if (this.colorScheme === 'dark') {
             this.colorScheme = 'light';
         } else {
-            this.colorScheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            this.colorScheme = this.prefersDark ? 'light' : 'dark';
         }
     }
 }

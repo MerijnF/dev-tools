@@ -17,12 +17,12 @@
 
 <style>
 	a {
-		display: inline-block;
 		text-decoration: none;
 		color: inherit;
 	}
 
 	.button {
+		display: inline-flex;
 		padding: var(--size-2) var(--size-3);
 		border: var(--border-neutral);
 		border-radius: var(--size-2);

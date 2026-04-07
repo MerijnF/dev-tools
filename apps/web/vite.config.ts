@@ -1,9 +1,17 @@
 import { defineConfig } from 'vitest/config';
 import { playwright } from '@vitest/browser-playwright';
 import { sveltekit } from '@sveltejs/kit/vite';
+import Icons from 'unplugin-icons/vite';
 
 export default defineConfig({
-	plugins: [sveltekit()],
+	plugins: [
+		sveltekit(),
+		Icons({
+			scale: 1.25,
+			defaultStyle: 'vertical-align: middle; height: calc(1em * var(--line-height)); width: calc(1em * var(--line-height));',
+			compiler: 'svelte'
+		})
+	],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
