@@ -2,6 +2,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { Card } from '$lib/components/ui/card';
 	import { Link } from '$lib/components/ui/link';
+	import Textarea from '$lib/components/ui/textarea/Textarea.svelte';
 	import PageTitle from '$lib/components/ui/title/PageTitle.svelte';
 	import Home from '~icons/material-symbols/home-outline-rounded';
 </script>
@@ -37,6 +38,12 @@
 				<Button kind="icon" rounded><Home /></Button>
 				text
 			</div>
+		</Card>
+		<Card>
+			<h3>Forms</h3>
+			<Textarea placeholder="Type something..." />
+			<Textarea placeholder="disabled" disabled />
+			<Textarea placeholder="3 lines" lines={3} resize={false} />
 		</Card>
 	</div>
 </section>

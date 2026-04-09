@@ -1,35 +1,51 @@
 <script lang="ts">
+	import clsx from 'clsx';
 	import type { HTMLTextareaAttributes } from 'svelte/elements';
 
-	let { ...restProps }: HTMLTextareaAttributes = $props();
+	type TextareaProps = HTMLTextareaAttributes & {
+		lines?: number;
+		resize?: boolean;
+	};
+
+	let { lines: initialLines = 1, resize = true, ...restProps }: TextareaProps = $props();
 </script>
 
-<textarea {...restProps}></textarea>
+<textarea class={clsx({ resize })} style="--textarea-lines: {initialLines}" {...restProps}
+></textarea>
 
 <style>
 	textarea {
-		background-color: var(--color-background);
-		color: var(--color-text);
+		background-color: var(--color-surface-container-highest);
+		color: var(--color-on-surface);
 		padding: var(--size-2) var(--size-3);
-		border: var(--border-neutral);
+		border: solid var(--color-outline) var(--size-stroke);
 		border-radius: var(--size-2);
 		vertical-align: top;
-		&.one-line {
-			height: calc(var(--size-line-height) + 2 * var(--size-2) + 2 * var(--size-stroke));
+		width: 100%;
+		resize: none;
+		--textarea-height: calc(
+			(1em * var(--line-height)) * var(--textarea-lines) + (2 * var(--size-2)) +
+				(2 * var(--size-stroke))
+		);
+		height: var(--textarea-height);
+		min-height: var(--textarea-height);
+
+		&.resize {
+			resize: vertical;
 		}
 
-		&:focus-visible {
+		&:focus-visible:not(:disabled) {
 			outline: var(--outline-focus);
 		}
 
 		&::placeholder {
-			color: var(--color-text-muted);
+			color: var(--color-on-surface-variant);
 		}
 
 		&:disabled {
-			background-color: var(--color-neutral-muted);
-			color: var(--color-text-muted);
+			opacity: 80%;
 			cursor: not-allowed;
+			resize: none;
 		}
 	}
 </style>
