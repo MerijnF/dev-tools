@@ -35,8 +35,10 @@
 	}
 
 	.button {
-		--button-background-color: var(--color-surface-container-low);
-		--button-color: var(--color-on-surface);
+		--color-button: var(--color-surface-container-low);
+		--color-on-button: var(--color-on-surface);
+		--button-background-color: var(--color-button);
+		--button-color: var(--color-on-button);
 		--button-border-radius: var(--size-2);
 		--button-padding-horizontal: var(--size-3);
 		--button-padding-vertical: var(--size-2);
@@ -45,7 +47,7 @@
 		justify-content: center;
 		vertical-align: middle;
 		padding: var(--button-padding-vertical) var(--button-padding-horizontal);
-		border: var(--border-neutral);
+		border: solid var(--button-background-color) var(--size-stroke);
 		border-radius: var(--button-border-radius);
 		box-shadow: var(--shadow-elevated);
 		transition: box-shadow 0.2s ease-out;
@@ -62,41 +64,41 @@
 		}
 
 		&.primary {
-			--button-background-color: var(--color-primary-container);
-			--button-color: var(--color-on-primary-container);
+			--color-button: var(--color-primary-container);
+			--color-on-button: var(--color-on-primary-container);
 		}
 
 		&:hover:not(:disabled) {
 			cursor: pointer;
-			background-color: color-mix(
+			--button-background-color: color-mix(
 				in srgb,
-				var(--button-background-color),
-				var(--button-color) var(--mix-hover)
+				var(--color-button),
+				var(--color-on-button) var(--mix-hover)
 			);
 		}
 
 		&:active:not(:disabled) {
 			box-shadow: none;
-			background-color: color-mix(
+			--button-background-color: color-mix(
 				in srgb,
-				var(--button-background-color),
-				var(--button-color) var(--mix-focus)
+				var(--color-button),
+				var(--color-on-button) var(--mix-focus)
 			);
 		}
 
 		&:focus:not(:disabled) {
-			background-color: color-mix(
+			--button-background-color: color-mix(
 				in srgb,
-				var(--button-background-color),
-				var(--button-color) var(--mix-focus)
+				var(--color-button),
+				var(--color-on-button) var(--mix-focus)
 			);
 		}
 
 		&:focus-visible:not(:disabled) {
-			background-color: color-mix(
+			--button-background-color: color-mix(
 				in srgb,
-				var(--button-background-color),
-				var(--button-color) var(--mix-focus)
+				var(--color-button),
+				var(--color-on-button) var(--mix-focus)
 			);
 			outline: var(--outline-focus);
 		}
