@@ -8,7 +8,7 @@ export default defineConfig({
 		sveltekit(),
 		Icons({
 			scale: 1.25,
-			defaultStyle: 'vertical-align: middle; height: calc(1em * var(--line-height)); width: calc(1em * var(--line-height));',
+			defaultClass: 'unplugin-icon',
 			compiler: 'svelte'
 		})
 	],

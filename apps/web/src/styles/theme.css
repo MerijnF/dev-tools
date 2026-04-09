@@ -59,3 +59,12 @@ textarea {
 ::after {
 	box-sizing: border-box;
 }
+
+/* vendor specific */
+
+.unplugin-icon {
+	display: inline-block;
+	vertical-align: middle;
+	height: calc(1em * var(--line-height));
+	width: calc(1em * var(--line-height));
+}
