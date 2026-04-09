@@ -4,15 +4,28 @@
 
 	type ButtonProps = ((HTMLAnchorAttributes & { href: string }) | HTMLButtonAttributes) & {
 		variant?: 'neutral' | 'primary';
+		kind?: 'default' | 'icon';
+		rounded?: boolean;
 	};
 
-	let { children, class: propsClass, variant = 'neutral', ...restProps }: ButtonProps = $props();
+	let {
+		children,
+		class: propsClass,
+		variant = 'neutral',
+		kind = 'default',
+		rounded = false,
+		...restProps
+	}: ButtonProps = $props();
 </script>
 
 {#if 'href' in restProps}
-	<a class={clsx(propsClass, 'button', variant)} {...restProps}>{@render children?.()}</a>
+	<a class={clsx(propsClass, 'button', variant, kind, { rounded })} {...restProps}
+		>{@render children?.()}</a
+	>
 {:else}
-	<button class={clsx(propsClass, 'button', variant)} {...restProps}>{@render children?.()}</button>
+	<button class={clsx(propsClass, 'button', variant, kind, { rounded })} {...restProps}
+		>{@render children?.()}</button
+	>
 {/if}
 
 <style>
@@ -22,17 +35,31 @@
 	}
 
 	.button {
+		--button-background-color: var(--color-surface-container-low);
+		--button-color: var(--color-on-surface);
+		--button-border-radius: var(--size-2);
+		--button-padding-horizontal: var(--size-3);
+		--button-padding-vertical: var(--size-2);
 		display: inline-flex;
-		padding: var(--size-2) var(--size-3);
+		align-items: center;
+		justify-content: center;
+		vertical-align: middle;
+		padding: var(--button-padding-vertical) var(--button-padding-horizontal);
 		border: var(--border-neutral);
-		border-radius: var(--size-2);
+		border-radius: var(--button-border-radius);
 		box-shadow: var(--shadow-elevated);
 		transition: box-shadow 0.2s ease-out;
 		font-weight: bold;
-		--button-background-color: var(--color-surface-container-low);
-		--button-color: var(--color-on-surface);
 		background-color: var(--button-background-color);
 		color: var(--button-color);
+
+		&.rounded {
+			--button-border-radius: var(--size-999);
+		}
+
+		&.icon {
+			--button-padding-horizontal: var(--size-2);
+		}
 
 		&.primary {
 			--button-background-color: var(--color-primary-container);

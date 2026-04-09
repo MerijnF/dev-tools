@@ -15,6 +15,7 @@
 	--size-6: 1.5rem;
 	--size-7: 1.75rem;
 	--size-8: 2rem;
+	--size-999: 9999px;
 
 	--font-size-small: 0.75rem; /* 12px * 1.25 = 15px */
 	--font-size-base: 1rem; /* 16px * 1.25 = 20px */

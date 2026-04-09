@@ -11,7 +11,9 @@
 	<nav>
 		<Button href={resolve('/tools')}>Tools</Button>
 	</nav>
-	<ThemeSwitcher />
+	<div class="settings">
+		<ThemeSwitcher />
+	</div>
 </header>
 
 <style>
@@ -41,6 +43,13 @@
 	nav {
 		display: flex;
 		gap: var(--size-4);
+		align-items: center;
+		margin-right: auto;
+	}
+
+	.settings {
+		display: flex;
+		gap: var(--size-2);
 		align-items: center;
 	}
 </style>
