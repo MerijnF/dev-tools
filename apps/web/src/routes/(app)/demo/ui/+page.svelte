@@ -1,9 +1,7 @@
 <script>
-	import { Button } from '$lib/components/ui/button';
+	import { Button, Link, PageTitle, Title } from '$lib/components/ui';
 	import { Card } from '$lib/components/ui/card';
-	import { Link } from '$lib/components/ui/link';
-	import Textarea from '$lib/components/ui/textarea/Textarea.svelte';
-	import PageTitle from '$lib/components/ui/title/PageTitle.svelte';
+	import { Textarea } from '$lib/components/ui/textarea';
 	import Home from '~icons/material-symbols/home-outline-rounded';
 </script>
 
@@ -15,11 +13,11 @@
 	<PageTitle>UI components</PageTitle>
 	<div class="grid">
 		<Card>
-			<h3>Link</h3>
+			<Title>Link</Title>
 			<Link href="#">This is a link</Link>
 		</Card>
 		<Card>
-			<h3>Button</h3>
+			<Title>Button</Title>
 			<div class="button-row">
 				<Button>Click me</Button>
 				<Button rounded>Click me</Button>
@@ -40,7 +38,7 @@
 			</div>
 		</Card>
 		<Card>
-			<h3>Forms</h3>
+			<Title>Forms</Title>
 			<Textarea placeholder="Type something..." />
 			<Textarea placeholder="disabled" disabled />
 			<Textarea placeholder="3 lines" lines={3} resize={false} />

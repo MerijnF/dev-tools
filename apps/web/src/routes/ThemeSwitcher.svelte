@@ -1,5 +1,5 @@
 <script>
-	import Button from '$lib/components/ui/button/Button.svelte';
+	import { Button } from '$lib/components/ui';
 	import { getThemeContext } from './theme-state.svelte';
 	import DarkMode from '~icons/material-symbols/dark-mode-outline-rounded';
 	import LightMode from '~icons/material-symbols/light-mode-outline-rounded';

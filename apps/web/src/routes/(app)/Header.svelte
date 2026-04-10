@@ -1,5 +1,5 @@
 <script>
-	import { Button } from '$lib/components/ui/button';
+	import { Button } from '$lib/components/ui';
 	import { resolve } from '$app/paths';
 	import ThemeSwitcher from '../ThemeSwitcher.svelte';
 </script>

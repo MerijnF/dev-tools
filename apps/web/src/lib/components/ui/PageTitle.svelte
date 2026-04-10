@@ -11,7 +11,7 @@
 	h1 {
 		font-size: var(--font-size-xlarge);
 		font-weight: bold;
-		color: var(--color-text);
+		color: var(--color-on-surface);
 		margin: 0 0 var(--size-2);
 	}
 </style>
