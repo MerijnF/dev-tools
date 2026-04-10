@@ -1,7 +1,7 @@
 import Root from './Card.svelte';
 
 export {
-    Root,
-    //
-    Root as Card
-}
+	Root,
+	//
+	Root as Card
+};

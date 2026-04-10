@@ -1,13 +1,13 @@
 <script>
 	import { resolve } from '$app/paths';
-	import { Link, PageTitle, Title } from '$lib/components/ui';
+	import { Link } from '$lib/components/ui';
 	import { Card } from '$lib/components/ui/card';
 </script>
 
-<PageTitle>Tools</PageTitle>
+<h1 class="page-title">Tools</h1>
 <div class="container">
 	<Card>
-		<Title>Encoding</Title>
+		<h2 class="title">Encoding</h2>
 		<ul>
 			<li><Link href={resolve('/tools/encoding/base64')}>Base64 encoder/decoder</Link></li>
 		</ul>

@@ -1,5 +1,5 @@
 <script>
-	import { Button, Link, PageTitle, Title } from '$lib/components/ui';
+	import { Button, Link } from '$lib/components/ui';
 	import { Card } from '$lib/components/ui/card';
 	import { Textarea } from '$lib/components/ui/textarea';
 	import Home from '~icons/material-symbols/home-outline-rounded';
@@ -10,14 +10,14 @@
 </svelte:head>
 
 <section>
-	<PageTitle>UI components</PageTitle>
+	<h1 class="page-title">UI components</h1>
 	<div class="grid">
 		<Card>
-			<Title>Link</Title>
+			<h2 class="title">Link</h2>
 			<Link href="#">This is a link</Link>
 		</Card>
 		<Card>
-			<Title>Button</Title>
+			<h2 class="title">Button</h2>
 			<div class="button-row">
 				<Button>Click me</Button>
 				<Button rounded>Click me</Button>
@@ -38,7 +38,7 @@
 			</div>
 		</Card>
 		<Card>
-			<Title>Forms</Title>
+			<h2 class="title">Forms</h2>
 			<Textarea placeholder="Type something..." />
 			<Textarea placeholder="disabled" disabled />
 			<Textarea placeholder="3 lines" lines={3} resize={false} />
