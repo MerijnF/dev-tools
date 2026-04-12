@@ -1,12 +1,6 @@
-import { form } from "$app/server";
-import * as v from "valibot";
+import { form } from '$app/server';
+import { encodeOrDecodeBase64, encodeOrDecodeBase64DataSchema } from '$lib/tools/encoding/base64';
 
-export const encodeOrDecodeBase64 = form(v.object({
-    input: v.string(),
-    action: v.picklist(["encode", "decode"])
-}), async (data) => {
-    const encoder = new TextEncoder();
-    const bytes = encoder.encode(data.input);
-    const base64 = bytes.toBase64();
-    return { output: base64 };
+export const encodeOrDecodeBase64Action = form(encodeOrDecodeBase64DataSchema, async (data) => {
+	return { output: encodeOrDecodeBase64(data) };
 });
